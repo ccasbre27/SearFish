@@ -10,4 +10,8 @@
     <string name="tiburones">Tiburones</string>
     <string name="tips">Tips</string>
     <string name="cuestionario">Cuestionario</string>
+
+    <string name="noconnection">Verifica la conexión a internet e intenta de nuevo</string>
+    <string name="nodata">¡Vaya parece que aún no hay proyectos de esta categoría!</string>
+
 </resources>

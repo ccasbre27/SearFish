@@ -3,6 +3,11 @@ package com.nansoft.fishackathoncr.activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,9 +19,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.nansoft.fishackathoncr.R;
+import com.nansoft.fishackathoncr.adapter.EspecieAdapter;
+import com.nansoft.fishackathoncr.fragment.EspecieFragment;
+import com.nansoft.fishackathoncr.model.Especie;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +55,17 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        Fragment fragment = new EspecieFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        // se cambia el fragment
+        fragmentManager.beginTransaction()
+                .replace(R.id.your_placeholder, fragment)
+                .commit();
+
+
     }
 
     @Override
