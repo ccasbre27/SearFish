@@ -19,5 +19,7 @@
 
     <string name="tiInsEtiquetado">¿Cómo se debe etiquetar el producto pesquero?</string>
     <string name="insEtiquetado">El reglamento establece una serie de información mínima para el etiquetado del producto pesquero.  A continuación un ejemplo de etiqueta: </string>
-
+    <string name="notaEtiquetado">La información de la etiqueta para el consumidor debe ser clara, visible y fácil de leer en circunstancias normales de compra y uso.\n
+        Si el producto pesquero ha sido tratado con monóxido de carbono (CO) u otra sustancia permitida para conservar, mantener o mejorar la vida útil del producto deberá indicarse en la etiqueta
+    </string>
 </resources>
