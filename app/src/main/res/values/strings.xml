@@ -22,4 +22,70 @@
     <string name="notaEtiquetado">La información de la etiqueta para el consumidor debe ser clara, visible y fácil de leer en circunstancias normales de compra y uso.\n
         Si el producto pesquero ha sido tratado con monóxido de carbono (CO) u otra sustancia permitida para conservar, mantener o mejorar la vida útil del producto deberá indicarse en la etiqueta
     </string>
+
+    <string name="c1">
+        El producto pesquero debe presentar un olor fresco y suave. El olor agrio, amargo, rancio o a amoníaco es indicación de mala calidad.
+    </string>
+
+    <string name="c2">
+        El producto pesquero debe tener una consistencia firme, su carne no debe ser masosa ni babosa. El pescado una vez congelado pierde firmeza.
+    </string>
+
+    <string name="c3">
+        Los ojos del pescado deben ser transparentes, un aspecto turbio es indicación de pérdida de frescura.
+    </string>
+
+    <string name="c4">
+        Solo compre pescado y mariscos cuando estén refrigerados  o en hielo,  la temperatura para almacenar el producto fresco es de 0 a 4 grados centígrados, y para producto congelado es de menos de 20 grados centígrados ó más.
+    </string>
+
+    <string name="c5">
+        No compre producto pesquero congelado cuando el paquete está abierto o roto.
+    </string>
+
+    <string name="c6">
+        Cuando descongele producto pesquero no lo pase directamente del congelador al chorro de agua ó a la temperatura ambiente, descongélelo gradualmente, colocándolo en la parte inferior del refrigerador durante la noche. Si necesita descongelarlo rápidamente, colóquelo  dentro de una bolsa plástica y sumérjalo en agua.
+    </string>
+
+    <string name="c7">
+        Una vez descongelado el producto pesquero, no se debe volver a congelar. Por ello se recomienda congelar el producto en porciones pequeñas, dentro de bolsas plásticas. De esta manera se descongela únicamente lo necesario para el consumo inmediato.
+    </string>
+
+    <string name="c8">
+        Cuando realice sus compras, compre el pescado al final de la jornada. Procure reducir al máximo el tiempo sin refrigeración, con ello evitará perder la cadena de frío.
+    </string>
+
+    <string name="c9">
+        Si compra pescado fresco para consumirse en las siguientes 24 horas, no debe congelarlo, coloquelo en la zona más fría de la refrigeradora. Recuerde que el producto pesquero al congelarlo pierde sus características naturales.
+    </string>
+
+    <string name="c10">
+        Cuando se compra pescado para congelarlo por varios días, se recomienda comprarlo congelado.
+    </string>
+
+    <string name="c11">
+        Evite la contaminación cruzada del pescado y mariscos durante el almacenamiento  en la refrigeradora.
+    </string>
+
+    <string name="c12">
+        Cuando compre cualquier especie de concha evite comprar  las que se encuentren quebradas, rajadas o abiertas.
+    </string>
+
+    <string name="c13">
+        Si compra calamares enteros retire sus vísceras antes de congelarlos.
+    </string>
+
+    <string name="c14">
+        Cuando compre camarones preste atención a la cáscara, si se desprende fácilmente y la carne tiene bordes amarillos, denota mala calidad.
+    </string>
+
+    <string name="c15">
+        Manténgase atento a la información sobre especies prohibidas, especies en peligro de extinción, épocas de “marea roja” u otro tipo de contaminación, que provocan restricciones de pesca en algunas zonas.
+    </string>
+
+
+    <string name="c16">
+        Siempre es mejor cocinar bien el producto pesquero antes de consumirlo, con ello evitará el riesgo de contraer enfermedades.
+    </string>
+
 </resources>

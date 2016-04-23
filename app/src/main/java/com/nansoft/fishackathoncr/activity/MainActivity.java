@@ -20,6 +20,7 @@ import android.view.MenuItem;
 
 import com.nansoft.fishackathoncr.R;
 import com.nansoft.fishackathoncr.adapter.EspecieAdapter;
+import com.nansoft.fishackathoncr.fragment.ConsejosFragment;
 import com.nansoft.fishackathoncr.fragment.EspecieFragment;
 import com.nansoft.fishackathoncr.fragment.EtiquetadoFragment;
 import com.nansoft.fishackathoncr.model.Especie;
@@ -144,6 +145,7 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_help:
+                fragment = new ConsejosFragment();
                 break;
 
             case R.id.nav_form:

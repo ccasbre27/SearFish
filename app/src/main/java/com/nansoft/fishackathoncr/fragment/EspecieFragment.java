@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,8 +60,8 @@ public class EspecieFragment extends Fragment
 
 
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(),2));
-
+        //recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(),2));
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swprlGeneral);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.colorPrimaryDark);
 
