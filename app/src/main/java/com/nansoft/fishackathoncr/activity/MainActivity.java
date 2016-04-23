@@ -29,6 +29,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    NavigationView navigationView;
 
 
     @Override
@@ -53,17 +54,28 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
         Fragment fragment = new EspecieFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("id",0);
+        fragment.setArguments(bundle);
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         // se cambia el fragment
         fragmentManager.beginTransaction()
                 .replace(R.id.your_placeholder, fragment)
                 .commit();
+
+
+
+
+
+
+
+
 
 
     }
@@ -106,12 +118,24 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        // Handle navigation view item clicks here.
+
+        Fragment fragment = new EspecieFragment();
+        Bundle bundle = new Bundle();
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+
         switch (id)
         {
             case R.id.nav_fish:
+                fragment = new EspecieFragment();
+                bundle.putInt("id",0);
                 break;
 
             case R.id.nav_shark:
+                fragment = new EspecieFragment();
+                bundle.putInt("id",1);
                 break;
 
             case R.id.nav_help:
@@ -121,10 +145,23 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
 
+        fragment.setArguments(bundle);
 
 
+        // se cambia el fragment
+        fragmentManager.beginTransaction()
+                .replace(R.id.your_placeholder, fragment)
+                .commit();
+
+        // establece la navegación al inicio
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
+        // se resalta el item que se selecciono para que el usuario tenga noción del lugar donde está
+        navigationView.getMenu().findItem(item.getItemId()).setChecked(true);
+
+
+
         return true;
     }
 }

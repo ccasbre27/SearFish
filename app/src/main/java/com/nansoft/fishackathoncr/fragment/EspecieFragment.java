@@ -31,6 +31,7 @@ public class EspecieFragment extends Fragment
     TextView txtvSad;
     List<Especie> lstEspecies;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -39,6 +40,10 @@ public class EspecieFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_general, container, false);
 
         getActivity().setTitle(getString(R.string.peces));
+
+        // se obtiene el id para saber si se deben cargar peces o tiburones
+        Bundle bundle = getArguments();
+        final int ID = bundle.getInt("id");
 
         lstEspecies = new ArrayList<Especie>();
 
@@ -63,7 +68,7 @@ public class EspecieFragment extends Fragment
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                cargarAreas(getActivity());
+                cargarAreas(getActivity(),ID);
             }
         });
         mSwipeRefreshLayout.post(new Runnable() {
@@ -73,11 +78,14 @@ public class EspecieFragment extends Fragment
             }
         });
 
-        cargarAreas(getActivity());
+
+
+
+        cargarAreas(getActivity(),ID);
         return view;
     }
 
-    public void cargarAreas(final FragmentActivity activity) {
+    public void cargarAreas(final FragmentActivity activity, int id) {
         /*
         estadoAdapter(false);
         mSwipeRefreshLayout.setEnabled(false);
@@ -145,7 +153,9 @@ public class EspecieFragment extends Fragment
         */
 
         Especie especie = new Especie();
-        especie.nombreCostaRica = "A";
+
+
+        especie.nombreCostaRica = id == 0 ? "A" : "B";
         especie.urlImagenReal = "http://www.mascotasyplantas.com/images/2010/10/tiburon-martillo1.jpg";
         for (int i = 0; i < 10; i++) {
             lstEspecies.add(especie);
