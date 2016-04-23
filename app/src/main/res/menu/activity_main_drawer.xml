@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_fish"
+            android:icon="@drawable/pez"
+            android:title="@string/peces" />
+        <item
+            android:id="@+id/nav_shark"
+            android:icon="@drawable/tiburon"
+            android:title="@string/tiburones" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ayuda"
+            android:title="@string/tips" />
+        <item
+            android:id="@+id/nav_form"
+            android:icon="@drawable/formulario"
+            android:title="@string/cuestionario" />
+    </group>
+
+
+</menu>
