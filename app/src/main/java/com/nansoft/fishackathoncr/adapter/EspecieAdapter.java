@@ -1,6 +1,7 @@
 package com.nansoft.fishackathoncr.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.nansoft.fishackathoncr.R;
+import com.nansoft.fishackathoncr.activity.DivisionEspecieActivity;
 import com.nansoft.fishackathoncr.model.Especie;
 
 import java.util.ArrayList;
@@ -51,7 +53,7 @@ public class EspecieAdapter extends
     @Override
     public void onBindViewHolder(EspecieAdapter.ViewHolder viewHolder, int position) {
         // Get the data model based on position
-        Especie especie = lstEspecies.get(position);
+        final Especie especie = lstEspecies.get(position);
 
         // Set item views based on the data model
         TextView textView = viewHolder.txtvTitulo;
@@ -65,6 +67,17 @@ public class EspecieAdapter extends
                 .placeholder(R.drawable.image_loading)
                 .error(R.drawable.image_error)
                 .into(viewHolder.imgvIcon);
+
+        // click listener de la imagen
+        viewHolder.imgvIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // se navega a la activity de interno y externo
+                Intent intent = new Intent(context, DivisionEspecieActivity.class);
+                intent.putExtra("especie",especie);
+                context.startActivity(intent);
+            }
+        });
     }
 
     // Return the total count of items
