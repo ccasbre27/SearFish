@@ -11,9 +11,15 @@
             android:icon="@drawable/tiburon"
             android:title="@string/tiburones" />
         <item
+            android:id="@+id/nav_tag"
+            android:icon="@drawable/etiqueta"
+            android:title="@string/etiqueta" />
+
+        <item
             android:id="@+id/nav_help"
             android:icon="@drawable/ayuda"
-            android:title="@string/tips" />
+            android:title="@string/consejos" />
+
         <item
             android:id="@+id/nav_form"
             android:icon="@drawable/formulario"

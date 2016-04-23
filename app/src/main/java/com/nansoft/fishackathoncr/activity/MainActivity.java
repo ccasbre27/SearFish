@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import com.nansoft.fishackathoncr.R;
 import com.nansoft.fishackathoncr.adapter.EspecieAdapter;
 import com.nansoft.fishackathoncr.fragment.EspecieFragment;
+import com.nansoft.fishackathoncr.fragment.EtiquetadoFragment;
 import com.nansoft.fishackathoncr.model.Especie;
 
 import java.util.ArrayList;
@@ -136,6 +137,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_shark:
                 fragment = new EspecieFragment();
                 bundle.putInt("id",1);
+                break;
+
+            case R.id.nav_tag:
+                fragment = new EtiquetadoFragment();
                 break;
 
             case R.id.nav_help:

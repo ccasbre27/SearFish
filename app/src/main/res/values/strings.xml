@@ -6,12 +6,18 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="etiqueta">Normas de etiquetado</string>
+    <string name="consejos">Consejos</string>
+
+
     <string name="peces">Peces</string>
     <string name="tiburones">Tiburones</string>
-    <string name="tips">Tips</string>
     <string name="cuestionario">Cuestionario</string>
 
     <string name="noconnection">Verifica la conexión a internet e intenta de nuevo</string>
     <string name="nodata">¡Vaya parece que aún no hay proyectos de esta categoría!</string>
+
+    <string name="tiInsEtiquetado">¿Cómo se debe etiquetar el producto pesquero?</string>
+    <string name="insEtiquetado">El reglamento establece una serie de información mínima para el etiquetado del producto pesquero.  A continuación un ejemplo de etiqueta: </string>
 
 </resources>
