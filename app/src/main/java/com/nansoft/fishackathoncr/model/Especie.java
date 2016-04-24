@@ -3,6 +3,8 @@ package com.nansoft.fishackathoncr.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,37 +12,87 @@ import java.util.List;
  * Created by Carlos on 23/04/2016.
  */
 public class Especie implements Parcelable {
+
+    @SerializedName("id")
     public String id;
+
+    @SerializedName("Nombrecientifico")
     public String nombreCientifico;
-    public String nombreCostaRica;
-    public List<Integer> lstCategorias;
-    public String nombreIngles;
-    public int idConsumo;
-    public int idCategoriaUICN;
-    public String tallaConsumo;
-    public String descripcion;
+
+    @SerializedName("Grupo")
+    public String grupo;
+
+    @SerializedName("CategoríaDeConsumo")
+    public String categoriaDeConsumo;
+
+    @SerializedName("CategoríaUICN")
+    public String categoriaUICN;
+
+    @SerializedName("Habitat")
     public String habitat;
-    public String alimentacion;
-    public String urlImagenReal;
-    public List<String> urlImagenesFiletes;
 
-    public Especie()
-    {
-        id = "Sin definir";
+    @SerializedName("LongitudFilet")
+    public String longitudFilet;
+
+    @SerializedName("PesoFilet")
+    public String pesoFilet;
+
+    @SerializedName("ColorFilet")
+    public String colorFilet;
+
+    @SerializedName("OlorFilet")
+    public String olorFilet;
+
+    @SerializedName("Observaciones")
+    public String observaciones;
+
+    @SerializedName("Usos")
+    public String usos;
+
+    @SerializedName("cuidados")
+    public String cuidados;
+
+    @SerializedName("PosiblesFraudes")
+    public String posiblesFraudes;
+
+    @SerializedName("NombreComun")
+    public String nombreComun;
+
+    @SerializedName("ModoCaptura")
+    public String modoCaptura;
+
+    @SerializedName("TallasMinMax")
+    public String tallasMinMax;
+
+    @SerializedName("urlimagenfilet")
+    public String urlImagenFilet;
+
+    public List<Especie> lstPosiblesFraudes;
+
+    public List<Especie> lstSimilares;
+
+
+    public Especie() {
         nombreCientifico = "Sin definir";
-        nombreCostaRica = "Sin definir";
-        lstCategorias = new ArrayList<>();
-        nombreIngles = "Sin definir";
-        idConsumo = 0;
-        idCategoriaUICN = 0;
-        tallaConsumo = "Sin definir";
-        descripcion = "";
-        habitat = "";
-        alimentacion = "";
-        urlImagenReal = "";
-        urlImagenesFiletes = new ArrayList<>();
+        grupo = "Sin definir";
+        categoriaDeConsumo = "Sin definir";
+        categoriaUICN = "Sin definir";
+        habitat = "Sin definir";
+        longitudFilet = "Sin definir";
+        pesoFilet = "Sin definir";
+        colorFilet = "Sin definir";
+        olorFilet = "Sin definir";
+        observaciones = "Sin definir";
+        usos = "Sin definir";
+        cuidados = "Sin definir";
+        posiblesFraudes = "Sin definir";
+        nombreComun = "Sin definir";
+        modoCaptura = "Sin definir";
+        tallasMinMax = "Sin definir";
+        urlImagenFilet = "Sin definir";
+        lstPosiblesFraudes = new ArrayList<>();
+        lstSimilares = new ArrayList<>();
     }
-
 
     @Override
     public int describeContents() {
@@ -51,37 +103,50 @@ public class Especie implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.id);
         dest.writeString(this.nombreCientifico);
-        dest.writeString(this.nombreCostaRica);
-        dest.writeList(this.lstCategorias);
-        dest.writeString(this.nombreIngles);
-        dest.writeInt(this.idConsumo);
-        dest.writeInt(this.idCategoriaUICN);
-        dest.writeString(this.tallaConsumo);
-        dest.writeString(this.descripcion);
+        dest.writeString(this.categoriaDeConsumo);
+        dest.writeString(this.categoriaUICN);
         dest.writeString(this.habitat);
-        dest.writeString(this.alimentacion);
-        dest.writeString(this.urlImagenReal);
-        dest.writeStringList(this.urlImagenesFiletes);
+        dest.writeString(this.longitudFilet);
+        dest.writeString(this.pesoFilet);
+        dest.writeString(this.colorFilet);
+        dest.writeString(this.olorFilet);
+        dest.writeString(this.observaciones);
+        dest.writeString(this.usos);
+        dest.writeString(this.cuidados);
+        dest.writeString(this.posiblesFraudes);
+        dest.writeString(this.nombreComun);
+        dest.writeString(this.modoCaptura);
+        dest.writeString(this.tallasMinMax);
+        dest.writeString(this.urlImagenFilet);
+        dest.writeTypedList(lstPosiblesFraudes);
+        dest.writeTypedList(lstSimilares);
     }
+
+
 
     protected Especie(Parcel in) {
         this.id = in.readString();
         this.nombreCientifico = in.readString();
-        this.nombreCostaRica = in.readString();
-        this.lstCategorias = new ArrayList<Integer>();
-        in.readList(this.lstCategorias, Integer.class.getClassLoader());
-        this.nombreIngles = in.readString();
-        this.idConsumo = in.readInt();
-        this.idCategoriaUICN = in.readInt();
-        this.tallaConsumo = in.readString();
-        this.descripcion = in.readString();
+        this.categoriaDeConsumo = in.readString();
+        this.categoriaUICN = in.readString();
         this.habitat = in.readString();
-        this.alimentacion = in.readString();
-        this.urlImagenReal = in.readString();
-        this.urlImagenesFiletes = in.createStringArrayList();
+        this.longitudFilet = in.readString();
+        this.pesoFilet = in.readString();
+        this.colorFilet = in.readString();
+        this.olorFilet = in.readString();
+        this.observaciones = in.readString();
+        this.usos = in.readString();
+        this.cuidados = in.readString();
+        this.posiblesFraudes = in.readString();
+        this.nombreComun = in.readString();
+        this.modoCaptura = in.readString();
+        this.tallasMinMax = in.readString();
+        this.urlImagenFilet = in.readString();
+        this.lstPosiblesFraudes = in.createTypedArrayList(Especie.CREATOR);
+        this.lstSimilares = in.createTypedArrayList(Especie.CREATOR);
     }
 
-    public static final Parcelable.Creator<Especie> CREATOR = new Parcelable.Creator<Especie>() {
+    public static final Creator<Especie> CREATOR = new Creator<Especie>() {
         @Override
         public Especie createFromParcel(Parcel source) {
             return new Especie(source);
