@@ -99,7 +99,7 @@ public class AddReportActivity extends AppCompatActivity {
 
     private void EnviarReporte(final Comentario comentario)
     {
-        new AsyncTask<Void, Void, Boolean>() {
+        new AsyncTask<Void, Void, Void>() {
 
 
             MobileServiceTable<Comentario> mComentarioTable;
@@ -135,31 +135,41 @@ public class AddReportActivity extends AppCompatActivity {
             }
 
             @Override
-            protected Boolean doInBackground(Void... params) {
+            protected Void doInBackground(Void... params) {
                 try {
 
-                    mComentarioTable.insert(comentario).get();
+                    mComentarioTable.insert(comentario);
 
-                    return true;
+                    progressDialog.dismiss();
+
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+
+                        }
+                    });
+
+                    /*****pendiente mover de aquí******/
+                    restablecerActivity();
+
+                    Snackbar.make( spnrTipo,"¡Reporte agregado, muchas gracias!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+
+
+
+
                 } catch (Exception exception) {
+                    /*
                     Snackbar.make(spnrTipo, "Error " + exception.toString(), Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                            */
                 }
-                return false;
+
+                return null;
             }
 
-            @Override
-            protected void onPostExecute(Boolean success)
-            {
 
-                progressDialog.dismiss();
-
-                Snackbar.make(spnrTipo, "¡Reporte agregado, muchas gracias!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-                restablecerActivity();
-
-            }
         }.execute();
     }
 

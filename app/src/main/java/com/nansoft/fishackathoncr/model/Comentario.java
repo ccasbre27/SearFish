@@ -26,7 +26,7 @@ public class Comentario implements Parcelable {
     @SerializedName("hora")
     public String horaPregunta;
 
-    @SerializedName("hora")
+    @SerializedName("Email")
     public String email;
 
 
