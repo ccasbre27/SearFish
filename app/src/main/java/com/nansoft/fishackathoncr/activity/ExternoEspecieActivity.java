@@ -22,6 +22,9 @@ public class ExternoEspecieActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // se establece el título de la activity con el nombre del pescado
+        setTitle(ItemAdapter.especieActual.nombreComun);
+
         cargarDatosExternos();
     }
 

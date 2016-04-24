@@ -7,14 +7,21 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nansoft.fishackathoncr.R;
 import com.nansoft.fishackathoncr.adapter.ItemAdapter;
 import com.nansoft.fishackathoncr.adapter.ItemSugeridosAdapter;
 import com.nansoft.fishackathoncr.model.Especie;
 import com.nansoft.fishackathoncr.model.Item;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
+
+import uk.co.senab.photoview.PhotoView;
 
 public class InternoEspecieActivity extends AppCompatActivity {
 
@@ -24,6 +31,9 @@ public class InternoEspecieActivity extends AppCompatActivity {
         setContentView(R.layout.desc_intern_especie);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // se establece el título de la activity con el pez seleccionado
+        setTitle(ItemAdapter.especieActual.nombreComun);
 
         // se agregan las opciones de caracerísticas externas e internas
         ArrayList<Item> lstItems = new ArrayList<>();
@@ -59,7 +69,43 @@ public class InternoEspecieActivity extends AppCompatActivity {
         recyclerViewSimilares.setLayoutManager(layoutManager);
         recyclerViewSimilares.setAdapter(adapter);
 
+        cargarDatosInternos();
 
+
+    }
+
+    private void cargarDatosInternos()
+    {
+        PhotoView imgvFilet = (PhotoView) findViewById(R.id.imgvPezIn);
+
+        Glide.with(this)
+                .load(ItemAdapter.especieActual.urlImagenFilet.trim())
+                .asBitmap()
+                .fitCenter()
+                .placeholder(R.drawable.image_loading)
+                .error(R.drawable.image_error)
+                .into(imgvFilet);
+
+        TextView txtvLongitud = (TextView) findViewById(R.id.txtvLongitudIn);
+        txtvLongitud.setText(ItemAdapter.especieActual.longitudFilet);
+
+        TextView txtvPeso = (TextView) findViewById(R.id.txtvPesoIn);
+        txtvPeso.setText(ItemAdapter.especieActual.pesoFilet);
+
+        TextView txtvColor = (TextView) findViewById(R.id.txtvColorIn);
+        txtvColor.setText(ItemAdapter.especieActual.colorFilet);
+
+        TextView txtvOlor = (TextView) findViewById(R.id.txtvOlorIn);
+        txtvOlor.setText(ItemAdapter.especieActual.olorFilet);
+
+        TextView txtvObservaciones = (TextView) findViewById(R.id.txtvObservaciones);
+        txtvObservaciones.setText(ItemAdapter.especieActual.observaciones);
+
+        TextView txtvUsos = (TextView) findViewById(R.id.txtvUsosIn);
+        txtvUsos.setText(ItemAdapter.especieActual.usos);
+
+        TextView txtvRecomendaciones = (TextView) findViewById(R.id.txtvRecomendacionesIn);
+        txtvRecomendaciones.setText(ItemAdapter.especieActual.cuidados);
 
     }
 

@@ -27,8 +27,13 @@ public class DivisionEspecieActivity extends AppCompatActivity {
         // se habilita navegación home
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+
         // se obtiene el objeto enviado
         Especie especie  = (Especie) getIntent().getParcelableExtra("especie");
+
+        // se establece el título de la activity
+        setTitle(especie.nombreComun);
 
         // se agregan las opciones de caracerísticas externas e internas
         ArrayList<Item> lstItems = new ArrayList<>();
