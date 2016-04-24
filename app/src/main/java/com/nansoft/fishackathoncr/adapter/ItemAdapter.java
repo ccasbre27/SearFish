@@ -1,6 +1,7 @@
 package com.nansoft.fishackathoncr.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.nansoft.fishackathoncr.R;
+import com.nansoft.fishackathoncr.activity.ExternoEspecieActivity;
 import com.nansoft.fishackathoncr.model.Especie;
 import com.nansoft.fishackathoncr.model.Item;
 
@@ -25,14 +27,15 @@ public class ItemAdapter extends
 
     // Store a member variable for the contacts
     private List<Item> lstItems;
+    private static Especie especieActual;
 
     private Context context;
 
-    public ItemAdapter(Context pContext,ArrayList<Item> plstItems)
+    public ItemAdapter(Context pContext,ArrayList<Item> plstItems,Especie pEspecie)
     {
         context = pContext;
         lstItems = plstItems;
-
+        especieActual = pEspecie;
 
     }
 
@@ -61,6 +64,15 @@ public class ItemAdapter extends
         textView.setText(item.nombre);
 
         viewHolder.imgvIcon.setImageResource(item.urlImagen);
+
+        viewHolder.imgvIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ExternoEspecieActivity.class);
+                intent.putExtra("especie",especieActual);
+                context.startActivity(intent);
+            }
+        });
     }
 
     // Return the total count of items
@@ -69,6 +81,10 @@ public class ItemAdapter extends
         return lstItems.size();
     }
 
+    public Especie getEspecieActual()
+    {
+        return especieActual;
+    }
 
     static class ViewHolder extends RecyclerView.ViewHolder
     {

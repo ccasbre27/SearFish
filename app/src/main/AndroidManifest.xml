@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.DescEspecieActivity" />
-        <activity android:name=".activity.DivisionEspecieActivity"></activity>
+        <activity android:name=".activity.DivisionEspecieActivity" />
+        <activity android:name=".activity.ExternoEspecieActivity"></activity>
     </application>
 
 </manifest>

@@ -23,6 +23,17 @@
         Si el producto pesquero ha sido tratado con monóxido de carbono (CO) u otra sustancia permitida para conservar, mantener o mejorar la vida útil del producto deberá indicarse en la etiqueta
     </string>
 
+    <string name="nombreCientifico">Nombre Científico</string>
+    <string name="nombreComun">Nombre Común</string>
+    <string name="grupo">Grupo</string>
+    <string name="estadoAmenaza">Estado de amenaza</string>
+    <string name="categoriaConsumo">Categoria de Consumo</string>
+    <string name="longitud">Longitud</string>
+    <string name="habitat">Hábitat</string>
+    <string name="baconIpsum">
+         Venison flank pork loin doner capicola biltong meatball.
+    </string>
+
     <string name="c1">
         El producto pesquero debe presentar un olor fresco y suave. El olor agrio, amargo, rancio o a amoníaco es indicación de mala calidad.
     </string>

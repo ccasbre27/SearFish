@@ -27,20 +27,23 @@ public class DivisionEspecieActivity extends AppCompatActivity {
         // se habilita navegación home
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // se obtiene el objeto enviado
+        Especie especie  = (Especie) getIntent().getParcelableExtra("especie");
+
+        // se agregan las opciones de caracerísticas externas e internas
         ArrayList<Item> lstItems = new ArrayList<>();
         lstItems.add(new Item(1,"Externo",R.drawable.extern));
         lstItems.add(new Item(2,"Interno",R.drawable.intern));
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.lstvGeneral);
 
-        ItemAdapter adapter = new ItemAdapter(this,lstItems);
+        ItemAdapter adapter = new ItemAdapter(this,lstItems,especie);
 
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
-        // se obtiene el objeto enviado
-        Especie especie  = (Especie) getIntent().getParcelableExtra("especie");
+
 
 
 
