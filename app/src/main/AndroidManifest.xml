@@ -25,6 +25,7 @@
         <activity android:name=".activity.DivisionEspecieActivity" />
         <activity android:name=".activity.ExternoEspecieActivity" />
         <activity android:name=".activity.InternoEspecieActivity" />
+        <activity android:name=".activity.AddReportActivity"></activity>
     </application>
 
 </manifest>

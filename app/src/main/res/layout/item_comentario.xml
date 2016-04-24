@@ -13,8 +13,8 @@
         <com.nansoft.fishackathoncr.helper.CircularImageView
             xmlns:app="http://schemas.android.com/apk/res/com.nansoft.fishackathoncr"
             android:id="@+id/imgvLogoUsuario_comment"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:border="true"
             app:border_color="@color/GrayLight"
             app:border_width="4dp"
@@ -56,8 +56,8 @@
         <com.nansoft.fishackathoncr.helper.CircularImageView
             xmlns:app="http://schemas.android.com/apk/res/com.nansoft.fishackathoncr"
             android:id="@+id/imgvLogoUsuario_answer"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             app:border="true"
             app:border_color="@color/GrayLight"
             app:border_width="4dp"
