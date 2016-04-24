@@ -25,11 +25,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/nombreCientifico"
+                    android:text="@string/nombreComun"
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtvNombreComunEx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baconIpsum"/>
@@ -37,6 +38,11 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+        
+        <ImageView
+            android:id="@+id/imgvPezEx"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -54,11 +60,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/nombreComun"
+                    android:text="@string/nombreCientifico"
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtvNombreCientificoEx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baconIpsum"/>
@@ -66,6 +73,8 @@
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
+
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -88,6 +97,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtvGrupoEx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baconIpsum"/>
@@ -117,6 +127,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtvEstadoAmenazaEx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baconIpsum"/>
@@ -146,6 +157,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtvCategoriaConsumoEx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baconIpsum"/>
@@ -175,6 +187,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtvLongitudEx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baconIpsum"/>
@@ -204,6 +217,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/txtvHabitatEx"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/baconIpsum"/>

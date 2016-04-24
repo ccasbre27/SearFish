@@ -26,7 +26,7 @@
     <string name="nombreCientifico">Nombre Científico</string>
     <string name="nombreComun">Nombre Común</string>
     <string name="grupo">Grupo</string>
-    <string name="estadoAmenaza">Estado de amenaza</string>
+    <string name="estadoAmenaza">Estado de amenaza (UICN)</string>
     <string name="categoriaConsumo">Categoria de Consumo</string>
     <string name="longitud">Longitud</string>
     <string name="habitat">Hábitat</string>

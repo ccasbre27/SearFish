@@ -28,7 +28,7 @@ public class ItemAdapter extends
 
     // Store a member variable for the contacts
     private List<Item> lstItems;
-    private static Especie especieActual;
+    public static Especie especieActual;
 
     private Context context;
 
