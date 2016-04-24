@@ -57,11 +57,11 @@ public class EspecieAdapter extends
 
         // Set item views based on the data model
         TextView textView = viewHolder.txtvTitulo;
-        textView.setText(especie.nombreCostaRica);
+        textView.setText(especie.nombreComun);
 
 
         Glide.with(context)
-                .load(especie.urlImagenReal.trim())
+                .load(especie.urlImagen.trim())
                 .asBitmap()
                 .fitCenter()
                 .placeholder(R.drawable.image_loading)

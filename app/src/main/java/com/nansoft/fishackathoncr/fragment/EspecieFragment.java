@@ -14,10 +14,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
+import com.microsoft.windowsazure.mobileservices.MobileServiceList;
+import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
+import com.microsoft.windowsazure.mobileservices.table.query.QueryOrder;
 import com.nansoft.fishackathoncr.R;
 import com.nansoft.fishackathoncr.adapter.EspecieAdapter;
 import com.nansoft.fishackathoncr.model.Especie;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -96,14 +101,14 @@ public class EspecieFragment extends Fragment
         return view;
     }
 
-    public void cargarAreas(final FragmentActivity activity, int id) {
-        /*
+    public void cargarAreas(final FragmentActivity activity, final int id) {
+
         estadoAdapter(false);
         mSwipeRefreshLayout.setEnabled(false);
         new AsyncTask<Void, Void, Boolean>() {
 
             MobileServiceClient mClient;
-            MobileServiceTable<Area> mAreaTable;
+            MobileServiceTable<Especie> mEspecieTable;
 
             @Override
             protected void onPreExecute()
@@ -111,23 +116,23 @@ public class EspecieFragment extends Fragment
                 try {
 
                     mClient = new MobileServiceClient(
-                            "https://msprojectnetworkjs.azure-mobile.net/",
-                            "gSewfUQpGFAVMRajseDOZwqCCRUwwD62",
+                            "https://fishackathoncr.azure-mobile.net/",
+                            "MGQHOhPeEaBsghWIPZUxbrsjqYNQpk25",
                             activity.getApplicationContext()
                     );
 
                 } catch (MalformedURLException e) {
 
                 }
-                mAreaTable = mClient.getTable("Area",Area.class);
+                mEspecieTable = mClient.getTable("tbl_Especie",Especie.class);
             }
 
             @Override
             protected Boolean doInBackground(Void... params) {
                 try {
-                    areasList = mAreaTable.orderBy("nombre", QueryOrder.Ascending).execute().get();
+                    List<Especie> result = mEspecieTable.where().field("idtipoespecie").eq(id).execute().get();
 
-                    adapter.setData(areasList);
+                    adapter.setEspecies(result);
 
                     activity.runOnUiThread(new Runnable() {
                         @Override
@@ -138,11 +143,11 @@ public class EspecieFragment extends Fragment
 
 
 
-                    return true;
+                    return false;
                 } catch (Exception exception) {
 
                 }
-                return false;
+                return true;
             }
 
             @Override
@@ -161,7 +166,7 @@ public class EspecieFragment extends Fragment
                 super.onCancelled();
             }
         }.execute();
-        */
+        /*
 
         Especie especie = new Especie();
 
@@ -181,11 +186,12 @@ public class EspecieFragment extends Fragment
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         });
+        */
     }
 
     private void estadoAdapter(boolean pEstadoError)
     {
-        if(lstEspecies.isEmpty() && pEstadoError)
+        if(pEstadoError)
         {
             imgvSad.setVisibility(View.VISIBLE);
             txtvSad.setVisibility(View.VISIBLE);

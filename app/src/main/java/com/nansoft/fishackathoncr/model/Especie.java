@@ -14,7 +14,7 @@ import java.util.List;
 public class Especie implements Parcelable {
 
     @SerializedName("id")
-    public String id;
+    public int id;
 
     @SerializedName("Nombrecientifico")
     public String nombreCientifico;
@@ -64,8 +64,14 @@ public class Especie implements Parcelable {
     @SerializedName("TallasMinMax")
     public String tallasMinMax;
 
+    @SerializedName("urlimagen")
+    public String urlImagen;
+
     @SerializedName("urlimagenfilet")
     public String urlImagenFilet;
+
+    @SerializedName("idtipoespecie")
+    public int idTipoEspecie;
 
     public List<Especie> lstPosiblesFraudes;
 
@@ -92,7 +98,11 @@ public class Especie implements Parcelable {
         urlImagenFilet = "Sin definir";
         lstPosiblesFraudes = new ArrayList<>();
         lstSimilares = new ArrayList<>();
+        urlImagen = "Sin definir";
+        urlImagenFilet = "Sin definir";
+        idTipoEspecie = 0;
     }
+
 
     @Override
     public int describeContents() {
@@ -101,8 +111,9 @@ public class Especie implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.id);
+        dest.writeInt(this.id);
         dest.writeString(this.nombreCientifico);
+        dest.writeString(this.grupo);
         dest.writeString(this.categoriaDeConsumo);
         dest.writeString(this.categoriaUICN);
         dest.writeString(this.habitat);
@@ -117,16 +128,17 @@ public class Especie implements Parcelable {
         dest.writeString(this.nombreComun);
         dest.writeString(this.modoCaptura);
         dest.writeString(this.tallasMinMax);
+        dest.writeString(this.urlImagen);
         dest.writeString(this.urlImagenFilet);
         dest.writeTypedList(lstPosiblesFraudes);
         dest.writeTypedList(lstSimilares);
+        dest.writeInt(this.idTipoEspecie);
     }
 
-
-
     protected Especie(Parcel in) {
-        this.id = in.readString();
+        this.id = in.readInt();
         this.nombreCientifico = in.readString();
+        this.grupo = in.readString();
         this.categoriaDeConsumo = in.readString();
         this.categoriaUICN = in.readString();
         this.habitat = in.readString();
@@ -141,9 +153,11 @@ public class Especie implements Parcelable {
         this.nombreComun = in.readString();
         this.modoCaptura = in.readString();
         this.tallasMinMax = in.readString();
+        this.urlImagen = in.readString();
         this.urlImagenFilet = in.readString();
         this.lstPosiblesFraudes = in.createTypedArrayList(Especie.CREATOR);
         this.lstSimilares = in.createTypedArrayList(Especie.CREATOR);
+        this.idTipoEspecie = in.readInt();
     }
 
     public static final Creator<Especie> CREATOR = new Creator<Especie>() {

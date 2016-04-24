@@ -19,7 +19,6 @@
         android:id="@+id/txtvTituloCategoria"
         android:gravity="center"
         android:ellipsize="marquee"
-        android:singleLine="true"
         android:textColor="@android:color/white"
         android:text="Persona"/>
 
