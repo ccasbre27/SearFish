@@ -48,47 +48,4 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp">
-
-        <com.nansoft.fishackathoncr.helper.CircularImageView
-            xmlns:app="http://schemas.android.com/apk/res/com.nansoft.fishackathoncr"
-            android:id="@+id/imgvLogoUsuario_answer"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:border="true"
-            app:border_color="@color/GrayLight"
-            app:border_width="4dp"
-            android:src="@drawable/bruce"
-            android:layout_margin="5dp"/>
-
-        <TextView
-            android:id="@+id/txtvNombreUsuario_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_toRightOf="@id/imgvLogoUsuario_answer"
-            android:text="Bruce"/>
-
-        <TextView
-            android:id="@+id/txtvDescripcion_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/imgvLogoUsuario_answer"
-            android:text="@string/baconIpsum"
-            android:layout_below="@id/txtvNombreUsuario_answer"/>
-
-        <TextView
-            android:id="@+id/txtvFecha_answer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtvDescripcion_answer"
-            android:layout_toRightOf="@id/imgvLogoUsuario_answer"
-            android:text="Hace 6 horas"/>
-
-    </RelativeLayout>
-
 </LinearLayout>

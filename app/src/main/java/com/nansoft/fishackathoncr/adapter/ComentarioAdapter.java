@@ -58,10 +58,7 @@ public class ComentarioAdapter extends
 
         viewHolder.imgvIconPregunta.setImageResource(item.urlImagenUsuarioPregunta);
 
-        //respuesta
-        viewHolder.txtvTituloRespuesta.setText(item.nombreUsuarioRespuesta);
-        viewHolder.txtvDescripcionoRespuesta.setText(item.descripcionRespuesta);
-        viewHolder.imgvIconoRespuesta.setImageResource(item.urlImagenUsuarioRespuesta);
+
 
 
     }
@@ -80,10 +77,6 @@ public class ComentarioAdapter extends
         public TextView txtvDescripcionPregunta;
         public CircularImageView imgvIconPregunta;
 
-        public TextView txtvTituloRespuesta;
-        public TextView txtvHoraRespuesta;
-        public TextView txtvDescripcionoRespuesta;
-        public CircularImageView imgvIconoRespuesta;
 
         public ViewHolder(View view)
         {
@@ -94,10 +87,7 @@ public class ComentarioAdapter extends
             txtvHoraPregunta = (TextView) view.findViewById(R.id.txtvFecha_comment);
             txtvDescripcionPregunta = (TextView) view.findViewById(R.id.txtvDescripcion_comment);
 
-            imgvIconoRespuesta = (CircularImageView) view.findViewById(R.id.imgvLogoUsuario_answer);
-            txtvTituloRespuesta = (TextView) view.findViewById(R.id.txtvNombreUsuario_answer);
-            txtvHoraRespuesta = (TextView) view.findViewById(R.id.txtvFecha_answer);
-            txtvDescripcionoRespuesta = (TextView) view.findViewById(R.id.txtvDescripcion_answer);
+
 
         }
     }

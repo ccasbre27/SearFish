@@ -3,34 +3,50 @@ package com.nansoft.fishackathoncr.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+import com.nansoft.fishackathoncr.R;
+
 /**
  * Created by Carlos on 23/04/2016.
  */
 public class Comentario implements Parcelable {
 
-    public String id;
+    @SerializedName("id")
+    public int id;
+
+    @SerializedName("NombreCompleto")
     public String nombreUsuarioPregunta;
+
+    @SerializedName("Descripcion")
     public String descripcionPregunta;
+
+    @SerializedName("urlImagen")
     public int urlImagenUsuarioPregunta;
+
+    @SerializedName("hora")
     public String horaPregunta;
 
-    public String nombreUsuarioRespuesta;
-    public String descripcionRespuesta;
-    public int urlImagenUsuarioRespuesta;
-    public String horaRespuesta;
+    @SerializedName("hora")
+    public String email;
 
-    public Comentario(String id, String nombreUsuarioPregunta, String descripcionPregunta, int urlImagenUsuarioPregunta, String horaPregunta, String nombreUsuarioRespuesta, String descripcionRespuesta, int urlImagenUsuarioRespuesta, String horaRespuesta) {
+
+
+
+    public Comentario(int id, String nombreUsuarioPregunta, String descripcionPregunta, int urlImagenUsuarioPregunta, String horaPregunta){
         this.id = id;
         this.nombreUsuarioPregunta = nombreUsuarioPregunta;
         this.descripcionPregunta = descripcionPregunta;
         this.urlImagenUsuarioPregunta = urlImagenUsuarioPregunta;
         this.horaPregunta = horaPregunta;
-        this.nombreUsuarioRespuesta = nombreUsuarioRespuesta;
-        this.descripcionRespuesta = descripcionRespuesta;
-        this.urlImagenUsuarioRespuesta = urlImagenUsuarioRespuesta;
-        this.horaRespuesta = horaRespuesta;
     }
 
+    public Comentario() {
+        this.nombreUsuarioPregunta = "Sin definir";
+        this.descripcionPregunta = "Sin definir";
+        this.urlImagenUsuarioPregunta = R.drawable.bruce;
+        this.horaPregunta = "Sin definir";
+        email = "Sin definir";
+    }
 
     @Override
     public int describeContents() {
@@ -39,27 +55,19 @@ public class Comentario implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.id);
+        dest.writeInt(this.id);
         dest.writeString(this.nombreUsuarioPregunta);
         dest.writeString(this.descripcionPregunta);
         dest.writeInt(this.urlImagenUsuarioPregunta);
         dest.writeString(this.horaPregunta);
-        dest.writeString(this.nombreUsuarioRespuesta);
-        dest.writeString(this.descripcionRespuesta);
-        dest.writeInt(this.urlImagenUsuarioRespuesta);
-        dest.writeString(this.horaRespuesta);
     }
 
     protected Comentario(Parcel in) {
-        this.id = in.readString();
+        this.id = in.readInt();
         this.nombreUsuarioPregunta = in.readString();
         this.descripcionPregunta = in.readString();
         this.urlImagenUsuarioPregunta = in.readInt();
         this.horaPregunta = in.readString();
-        this.nombreUsuarioRespuesta = in.readString();
-        this.descripcionRespuesta = in.readString();
-        this.urlImagenUsuarioRespuesta = in.readInt();
-        this.horaRespuesta = in.readString();
     }
 
     public static final Parcelable.Creator<Comentario> CREATOR = new Parcelable.Creator<Comentario>() {

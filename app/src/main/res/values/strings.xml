@@ -43,6 +43,8 @@
     <string name="provincia">Provincia</string>
     <string name="enviar">Enviar</string>
     <string name="insZonaReporte">Provincia</string>
+    <string name="insUsuarioReporte">Ingrese su nombre (opcional)</string>
+    <string name="insEmailReporte">Ingrese su email</string>
 
     <string-array name="provincias_array">
         <item>San José</item>

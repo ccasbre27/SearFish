@@ -37,7 +37,7 @@ public class ReportFragment extends Fragment
         getActivity().setTitle(getString(R.string.reporte));
 
         lstComentarios = new ArrayList<>();
-        lstComentarios.add(new Comentario("1","Juan Perez","Mi super descripción",R.drawable.bruce,"Hace 1 hora","Carlos Castro","Mi otra descripción",R.drawable.pez,"Hace 1 minuto"));
+        lstComentarios.add(new Comentario(1,"Juan Perez","Mi super descripción",R.drawable.bruce,"Hace 1 hora"));
 
         adapter = new ComentarioAdapter(view.getContext(),lstComentarios);
 
