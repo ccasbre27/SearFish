@@ -30,6 +30,20 @@
     <string name="categoriaConsumo">Categoria de Consumo</string>
     <string name="longitud">Longitud</string>
     <string name="habitat">Hábitat</string>
+    <string name="peso">Peso</string>
+    <string name="olor">Olor</string>
+    <string name="color">Color</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="usos">Usos</string>
+    <string name="recomendaciones">Recomendaciones</string>
+    <string name="prevenciones">Prevenciones</string>
+    <string name="especiesSimilares">Especies Similares</string>
+    <string name="posiblesFraudes">Posibles Fraudes</string>
+    <string name="registrarCompra">Regístre su compra</string>
+    <string name="provincia">Provincia</string>
+
+    <string name="caracteristicasExternas">Características Externas</string>
+    <string name="caracteristicasInternas">Características Internas</string>
     <string name="baconIpsum">
          Venison flank pork loin doner capicola biltong meatball.
     </string>

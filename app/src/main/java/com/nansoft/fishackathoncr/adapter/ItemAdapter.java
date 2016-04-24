@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.nansoft.fishackathoncr.R;
 import com.nansoft.fishackathoncr.activity.ExternoEspecieActivity;
+import com.nansoft.fishackathoncr.activity.InternoEspecieActivity;
 import com.nansoft.fishackathoncr.model.Especie;
 import com.nansoft.fishackathoncr.model.Item;
 
@@ -57,7 +58,7 @@ public class ItemAdapter extends
     @Override
     public void onBindViewHolder(ItemAdapter.ViewHolder viewHolder, int position) {
         // Get the data model based on position
-        Item item = lstItems.get(position);
+        final Item item = lstItems.get(position);
 
         // Set item views based on the data model
         TextView textView = viewHolder.txtvTitulo;
@@ -68,7 +69,8 @@ public class ItemAdapter extends
         viewHolder.imgvIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ExternoEspecieActivity.class);
+
+                Intent intent = item.id == 1 ?  new Intent(context, ExternoEspecieActivity.class) :  new Intent(context, InternoEspecieActivity.class);;
                 intent.putExtra("especie",especieActual);
                 context.startActivity(intent);
             }
