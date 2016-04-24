@@ -46,6 +46,16 @@ public class EspecieFragment extends Fragment
         Bundle bundle = getArguments();
         final int ID = bundle.getInt("id");
 
+        // se establece el título
+        if(ID == 0 )
+        {
+            getActivity().setTitle(getString(R.string.peces));
+        }
+        else
+        {
+            getActivity().setTitle(getString(R.string.tiburones));
+        }
+
         lstEspecies = new ArrayList<Especie>();
 
         View includedLayout = view.findViewById(R.id.sindatos);
