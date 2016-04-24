@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nansoft.fishackathoncr.R;
+import com.nansoft.fishackathoncr.activity.DivisionEspecieActivity;
 import com.nansoft.fishackathoncr.activity.ExternoEspecieActivity;
 import com.nansoft.fishackathoncr.activity.InternoEspecieActivity;
 import com.nansoft.fishackathoncr.model.Especie;
@@ -26,12 +28,12 @@ public class ItemSugeridosAdapter extends
 {
 
     // Store a member variable for the contacts
-    private List<Item> lstItems;
+    private List<Especie> lstItems;
     private static Especie especieActual;
 
     private Context context;
 
-    public ItemSugeridosAdapter(Context pContext, ArrayList<Item> plstItems, Especie pEspecie)
+    public ItemSugeridosAdapter(Context pContext, ArrayList<Especie> plstItems, Especie pEspecie)
     {
         context = pContext;
         lstItems = plstItems;
@@ -57,20 +59,29 @@ public class ItemSugeridosAdapter extends
     @Override
     public void onBindViewHolder(ItemSugeridosAdapter.ViewHolder viewHolder, int position) {
         // Get the data model based on position
-        final Item item = lstItems.get(position);
+        final Especie item = lstItems.get(position);
 
         // Set item views based on the data model
         TextView textView = viewHolder.txtvTitulo;
-        textView.setText(item.nombre);
+        textView.setText(item.nombreComun);
 
-        viewHolder.imgvIcon.setImageResource(item.urlImagen);
+        //viewHolder.imgvIcon.setImageResource(item.urlImagen);
+
+
+        Glide.with(context)
+                .load(item.urlImagen.trim())
+                .asBitmap()
+                .fitCenter()
+                .placeholder(R.drawable.image_loading)
+                .error(R.drawable.image_error)
+                .into(viewHolder.imgvIcon);
 
         viewHolder.imgvIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = item.id == 1 ?  new Intent(context, ExternoEspecieActivity.class) :  new Intent(context, InternoEspecieActivity.class);;
-                intent.putExtra("especie",especieActual);
+                Intent intent = new Intent(context, DivisionEspecieActivity.class) ;
+                intent.putExtra("especie",item);
                 context.startActivity(intent);
             }
         });

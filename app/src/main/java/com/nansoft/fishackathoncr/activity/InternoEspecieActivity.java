@@ -36,13 +36,31 @@ public class InternoEspecieActivity extends AppCompatActivity {
         setTitle(ItemAdapter.especieActual.nombreComun);
 
         // se agregan las opciones de caracerísticas externas e internas
-        ArrayList<Item> lstItems = new ArrayList<>();
-        lstItems.add(new Item(1,"Externo",R.drawable.extern));
-        lstItems.add(new Item(2,"Interno",R.drawable.intern));
-        lstItems.add(new Item(2,"Interno",R.drawable.intern));
-        lstItems.add(new Item(2,"Interno",R.drawable.intern));
-        lstItems.add(new Item(2,"Interno",R.drawable.intern));
-        lstItems.add(new Item(2,"Interno",R.drawable.intern));
+        ArrayList<Especie> lstItems = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            lstItems.add(new Especie(5,
+                    "Cynoscion albus",
+                    "Corvinas, Pollas, Zorras",
+
+                    "Aceptable con reservas",
+                    "Sin información",
+                    "Esteros, desembocaduras",
+                    "50-60 cm de largo por 15-20 cm de ancho.",
+                    "Filetes de 100-200 g.",
+                    "Fresco: De blanco a rosado. No Fresco: toma coloración amarillenta.",
+                    "Olor a pescado fresco, no debe presentar olores fuertes ni rancios.",
+                    "La dirección de las fibras musculares se proyectan hacia la parte anterior del individuo.  Los filetes de esta especie no se aprecian tanto las fibras blancas que son muy comunes en otras especies de corvina, dándole una consistencia mucho más pareja y regular. Además es fácilmente identificable porque suelen quedar partes de la piel color blanco adheridas al filete. Además se pueden diferenciar de las otras corvinas por su tamaño, ya que la corvina reina es más grande.",
+                    "Se comercializa en filetes frescos o descongelados.",
+                    "Respetar las épocas de veda en el Golfo de Nicoya y las tallas mínimas.",
+                    "Sin definir",
+                    "Corvina Reina",
+                    "Pesca artesanal, trasmallo, cuerda",
+                    "55.0 - 130.0 cm",
+                    "https://wanted.blob.core.windows.net/img/Corvina reina.jpg"	,
+                    "https://wanted.blob.core.windows.net/img/Corvina reina.png"));
+
+
+        }
 
 
         RecyclerView recyclerViewSugeridos = (RecyclerView) findViewById(R.id.rvSugeridos);

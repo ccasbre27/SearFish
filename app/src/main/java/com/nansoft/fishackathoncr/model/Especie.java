@@ -77,6 +77,27 @@ public class Especie implements Parcelable {
 
     public List<Especie> lstSimilares;
 
+    public Especie(int id, String nombreCientifico, String grupo, String categoriaDeConsumo, String categoriaUICN, String habitat, String longitudFilet, String pesoFilet, String colorFilet, String olorFilet, String observaciones, String usos, String cuidados, String posiblesFraudes, String nombreComun, String modoCaptura, String tallasMinMax, String urlImagen, String urlImagenFilet) {
+        this.id = id;
+        this.nombreCientifico = nombreCientifico;
+        this.grupo = grupo;
+        this.categoriaDeConsumo = categoriaDeConsumo;
+        this.categoriaUICN = categoriaUICN;
+        this.habitat = habitat;
+        this.longitudFilet = longitudFilet;
+        this.pesoFilet = pesoFilet;
+        this.colorFilet = colorFilet;
+        this.olorFilet = olorFilet;
+        this.observaciones = observaciones;
+        this.usos = usos;
+        this.cuidados = cuidados;
+        this.posiblesFraudes = posiblesFraudes;
+        this.nombreComun = nombreComun;
+        this.modoCaptura = modoCaptura;
+        this.tallasMinMax = tallasMinMax;
+        this.urlImagen = urlImagen;
+        this.urlImagenFilet = urlImagenFilet;
+    }
 
     public Especie() {
         nombreCientifico = "Sin definir";
