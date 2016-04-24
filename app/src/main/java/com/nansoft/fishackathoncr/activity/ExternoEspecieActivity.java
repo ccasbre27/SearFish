@@ -13,6 +13,8 @@ import com.nansoft.fishackathoncr.adapter.ItemAdapter;
 
 import org.w3c.dom.Text;
 
+import uk.co.senab.photoview.PhotoView;
+
 public class ExternoEspecieActivity extends AppCompatActivity {
 
     @Override
@@ -36,7 +38,7 @@ public class ExternoEspecieActivity extends AppCompatActivity {
         TextView txtvNombreCientifico = (TextView) findViewById(R.id.txtvNombreCientificoEx);
         txtvNombreCientifico.setText(ItemAdapter.especieActual.nombreCientifico);
 
-        ImageView imgvPez = (ImageView) findViewById(R.id.imgvPezEx);
+        PhotoView imgvPez = (PhotoView) findViewById(R.id.imgvPezEx);
 
         Glide.with(this)
                 .load(ItemAdapter.especieActual.urlImagen.trim())
