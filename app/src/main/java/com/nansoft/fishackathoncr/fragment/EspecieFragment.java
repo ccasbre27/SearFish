@@ -60,8 +60,8 @@ public class EspecieFragment extends Fragment
 
 
         recyclerView.setAdapter(adapter);
-        //recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(),2));
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(),2));
+        //recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swprlGeneral);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.colorPrimaryDark);
 

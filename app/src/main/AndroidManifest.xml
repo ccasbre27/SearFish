@@ -24,7 +24,7 @@
         <activity android:name=".activity.DescEspecieActivity" />
         <activity android:name=".activity.DivisionEspecieActivity" />
         <activity android:name=".activity.ExternoEspecieActivity" />
-        <activity android:name=".activity.InternoEspecieActivity"></activity>
+        <activity android:name=".activity.InternoEspecieActivity" />
     </application>
 
 </manifest>

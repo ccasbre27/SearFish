@@ -8,7 +8,7 @@
 
     <string name="etiqueta">Normas de etiquetado</string>
     <string name="consejos">Consejos</string>
-
+    <string name="reporte">Reporte</string>
 
     <string name="peces">Peces</string>
     <string name="tiburones">Tiburones</string>
@@ -41,6 +41,16 @@
     <string name="posiblesFraudes">Posibles Fraudes</string>
     <string name="registrarCompra">Regístre su compra</string>
     <string name="provincia">Provincia</string>
+
+    <string-array name="provincias_array">
+        <item>San José</item>
+        <item>Alajuela</item>
+        <item>Cartago</item>
+        <item>Heredia</item>
+        <item>Guanacaste</item>
+        <item>Puntarenas</item>
+        <item>Limón</item>
+    </string-array>
 
     <string name="caracteristicasExternas">Características Externas</string>
     <string name="caracteristicasInternas">Características Internas</string>

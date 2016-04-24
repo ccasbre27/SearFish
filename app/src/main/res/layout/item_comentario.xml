@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <com.nansoft.fishackathoncr.helper.CircularImageView
+        xmlns:app="http://schemas.android.com/apk/res/com.nansoft.fishackathoncr"
+        android:id="@+id/imgvLogoUsuario_comment"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:border="true"
+        app:border_color="@color/GrayLight"
+        app:border_width="4dp"
+        android:src="@drawable/bruce"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:id="@+id/txtvNombreUsuario_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_toRightOf="@id/imgvLogoUsuario_comment"
+        android:text="Bruce"/>
+
+    <TextView
+        android:id="@+id/txtvDescripcion_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgvLogoUsuario_comment"
+        android:text="@string/baconIpsum"
+        android:layout_below="@id/txtvNombreUsuario_comment"/>
+
+    <TextView
+        android:id="@+id/txtvFecha_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtvDescripcion_comment"
+        android:layout_toRightOf="@id/imgvLogoUsuario_comment"
+        android:text="Hace 6 horas"/>
+
+
+
+</RelativeLayout>
+

@@ -23,6 +23,7 @@ import com.nansoft.fishackathoncr.adapter.EspecieAdapter;
 import com.nansoft.fishackathoncr.fragment.ConsejosFragment;
 import com.nansoft.fishackathoncr.fragment.EspecieFragment;
 import com.nansoft.fishackathoncr.fragment.EtiquetadoFragment;
+import com.nansoft.fishackathoncr.fragment.ReportFragment;
 import com.nansoft.fishackathoncr.model.Especie;
 
 import java.util.ArrayList;
@@ -149,6 +150,7 @@ public class MainActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_form:
+                fragment = new ReportFragment();
                 break;
         }
 
