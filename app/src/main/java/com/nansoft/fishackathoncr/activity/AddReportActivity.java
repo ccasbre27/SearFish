@@ -157,7 +157,19 @@ public class AddReportActivity extends AppCompatActivity {
                 Snackbar.make(spnrTipo, "¡Reporte agregado, muchas gracias!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
+                restablecerActivity();
+
             }
         }.execute();
+    }
+
+    private void restablecerActivity()
+    {
+        edtEmail.setText("");
+        edtUsuario.setText("");
+        edtDescripcion.setText("");
+
+        spnrTipo.setSelection(0);
+        spnrProvincia.setSelection(0);
     }
 }
