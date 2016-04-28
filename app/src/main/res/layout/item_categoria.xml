@@ -3,22 +3,21 @@
     android:id="@+id/layItemCategoria"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
-    android:layout_margin="10dp"
+
     android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/imgvCategoria"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"/>
+        android:layout_gravity="center"/>
 
     <TextView
         style="@style/stlLetras"
         android:id="@+id/txtvTituloCategoria"
         android:gravity="center"
         android:ellipsize="marquee"
+        android:layout_margin="10dp"
         android:textColor="@android:color/white"
         android:text="Persona"/>
 
